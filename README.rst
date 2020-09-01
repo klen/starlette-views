@@ -3,7 +3,7 @@ Starlette-Views
 
 .. _description:
 
-**starlette-views** -- Create views simpler
+**starlette-views** -- A helper to make views faster with Starlette_
 
 Starlette-Views automatically converts views results into
 `starlette.responses.Response` objects.
@@ -162,4 +162,5 @@ Licensed under a `MIT license`_.
 
 .. _klen: https://github.com/klen
 .. _MIT license: http://opensource.org/licenses/MIT
+.. _Starlette: https://starlette.io
 
