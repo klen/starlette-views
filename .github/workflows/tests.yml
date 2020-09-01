@@ -24,7 +24,18 @@ jobs:
       with:
         python-version: 3.8
 
+    - name: Use cache
+      id: cache-env
+      uses: actions/cache@v2
+      with:
+        path: env
+        key: ${{ runner.os }}-env-${{ hashFiles('requirements-tests.txt') }}
+
+    - name: Setup requirements
+      run: |
+        pip install virtualenv && virtualenv --python=python3 env && env/bin/pip install -r requirements-tests.txt
+      if: steps.cache-env.outputs.cache-hit != 'true'
+
     - name: Test with pytest
       run: |
-        make test
-
+        env/bin/pytest tests.py
