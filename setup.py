@@ -20,7 +20,7 @@ setup(
     description="Create endpoints simpler",
     long_description=_read('README.rst'),
 
-    modules=['starlette_views'],
+    py_modules=['starlette_views'],
 
     author='Kirill Klenov',
     author_email='horneds@gmail.com',
